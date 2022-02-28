@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="farkle.css">
 	<script type="text/javascript" src="farkle.js"></script>
 	<title>Farkle!</title>
 </head>
 
 <body onload="initializeDice()">
-	<header class="row header">Welcome to Farkle!</header>
-	<div class="row">
-		<!-- Dice images -->
-		<div class="dice"> 
-			<img src="images/1.png" id="die1" data-number="0" onclick="diceClick(this)">
-			<img src="images/2.png" id="die2" data-number="1" onclick="diceClick(this)">
-			<img src="images/3.png" id="die3" data-number="2" onclick="diceClick(this)">
-			<img src="images/4.png" id="die4" data-number="3" onclick="diceClick(this)">
-			<img src="images/5.png" id="die5" data-number="4" onclick="diceClick(this)">
-			<img src="images/6.png" id="die6" data-number="5" onclick="diceClick(this)">
+	<div class="body-container">
+		<div class="left">
+			<h1 class="row header">Welcome to <span>Farkle</span>!</h1>
+			<div class="row">
+				<!-- Dice images -->
+				<div class="dice"> 
+					<img src="images/1.png" id="die1" data-number="0" onclick="diceClick(this)">
+					<img src="images/2.png" id="die2" data-number="1" onclick="diceClick(this)">
+					<img src="images/3.png" id="die3" data-number="2" onclick="diceClick(this)">
+					<img src="images/4.png" id="die4" data-number="3" onclick="diceClick(this)">
+					<img src="images/5.png" id="die5" data-number="4" onclick="diceClick(this)">
+					<img src="images/6.png" id="die6" data-number="5" onclick="diceClick(this)">
+				</div>
+			</div>
+			<!-- Scoring -->
+			<div class="row score"> 0 </div>
+		
+			<!-- Button row -->
+			<div class="row">
+				<button class="button roll column" onclick="rollDice()">Roll Dice</button>
+				<button class="button bank column">Bank Score</button>
+			</div>
 		</div>
-	</div>
-	<!-- Scoring -->
-	<div class="row score"> 0 </div>
 
-	<!-- Button row -->
-	<div class="row">
-		<button class="button roll column" onclick="rollDice()">Roll Dice</button>
-		<button class="button bank column">Bank Score</button>
+		<div class="right">
+			<img src="images/scoringsheet.jpeg">
+		</div>
+
 	</div>
+
 </body>
 </html>
