@@ -37,28 +37,39 @@ function diceClick(img){
 
 // calculate score when you press bank score
 function bankScore(arr) {
+	
 	// variable for score
-	score = 0;
+	var score = 0;
 
 	// arr to store selected dice
-	selectedArr = [];
+	var selectedArr = [];
 
 	// arr to store unselected dice
-	unusedArr = [];
+	var unusedArr = [];
 
 	// variable to store farkle (if true you lose your turn and you score no points);
-	farkle = false;
+	var farkle = false;
 
 	// Check if each dice in arr is selected by user
 	for ( var i=0; i < arr.length; i++) {
 		if (diceArr[i].clicked === 1) {
 			// if it's selected put in selected arr
 			selectedArr.push(diceArr[i].value);
+			console.log(selectedArr);
 		} else {
 			// if not put in unused arr
 			unusedArr.push(diceArr[i].value);
 		}
+
+	if ( selectedArr.includes(1) === true ) {
+		score = score + 100;
+	} else if ( selectedArr.includes(5) === true ) {
+		score = score + 50;
+	} else {
+		break;
 	}
+	}
+
 
 	// Switch statements 
 	// Switch - if 1 item in arr
