@@ -1,4 +1,5 @@
 var diceArr = [];
+var bankButtonEl = document.getElementById('bank-button');
 
 function initializeDice(){
 	for(i = 0; i < 6; i++){
@@ -35,6 +36,9 @@ function diceClick(img){
 
 }
 
+bankButtonEl.addEventListener("click", bankScore(diceArr));
+
+
 // calculate score when you press bank score
 function bankScore(arr) {
 	
@@ -66,7 +70,6 @@ function bankScore(arr) {
 	} else if ( selectedArr.includes(5) === true ) {
 		score = score + 50;
 	} else {
-		break;
 	}
 	}
 
